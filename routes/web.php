@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('pages.index');
+// });
+
+Route::group(['prefix'=>'/'],function(){
+	
+	 Route::get('/',[PageController::class, 'getIndex'])->name('index');
+
+
 });
