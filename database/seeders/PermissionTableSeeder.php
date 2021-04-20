@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Permission;
 
 
 class PermissionTableSeeder extends Seeder
@@ -14,7 +15,7 @@ class PermissionTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('permissions')->insert([
+        Permission::insert([
         	['name' => 'admin-list', 'display_name' => 'Danh sách admin'],
         	['name' => 'delete-admin', 'display_name' => 'Xóa tài khoản admin'],
         	['name' => 'add-admin', 'display_name' => 'Thêm tài khoản admin'],
