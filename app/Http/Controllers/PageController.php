@@ -10,4 +10,16 @@ class PageController extends Controller
     	
     	return view('pages.index');
     }
+
+    public function getBlog(){
+    	
+    	return view('pages.blog');
+    }
+
+    public function getContact(){
+    	
+    	return view('pages.contact');
+    }
+
+    
 }

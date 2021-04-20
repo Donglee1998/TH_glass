@@ -4,29 +4,31 @@
 <head>
   <!-- Required meta tags -->
   <title>TH glass</title>
-  <link rel="shorcut icon" type="image/png" href="images/favicon.png">
+  <link rel="shorcut icon" type="image/png" href="{{asset('images/favicon.png')}}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
   <!-- Slick CSS -->
-  <link rel="stylesheet" href="css/slick.css"/>
-  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="{{asset('css/slick.css')}}"/>
+  <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="{{asset('css/all.min.css')}}">
   <!-- Wow CSS -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
   <!-- Global CSS -->
-  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="{{asset('css/global.css')}}">
   <!-- Responsive CSS -->
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
   <!-- Header -->
-  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="{{asset('css/header.css')}}">
   <!-- Footer CSS -->
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="{{asset('css/footer.css')}}">
   <!-- Menu CSS -->
-  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="{{asset('css/menu.css')}}">
+
+  <link rel="stylesheet" href="{{asset('css/login.css')}}">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto:400,500&display=swap&subset=vietnamese" rel="stylesheet">
 </head>
@@ -37,19 +39,18 @@
    <!-- Menu -->
    <div class="container-fluid menu-wrap">
     <div class="container mx-auto menu">
-      <div class="logo"> <a href="index.html"><img src="images/logo1.svg" alt="logo" title="Logo"></a></div>
+      <div class="logo"> <a href="#"><img src="{{asset('images/logo1.svg')}}" alt="logo" title="Logo"></a></div>
       <nav>
         <ul>
-          <li><a href="index.html" title="Trang chủ">Trang chủ</a></li>
-          <li><a href="about.html" title="Về chúng tôi">Về chúng tôi</a></li>
-          <li><a href="product.html" title="Sản phẩm">Sản phẩm </a></li>
-          <li><a href="news.html" title="Tin tức">Tin tức</a></li>
-          <li><a href="contact.html" title="Liên hệ">Liên hệ</a></li>
+          <li><a href="{{route('index')}}" title="Trang chủ">Home</a></li>
+          <li><a href="{{route('event')}}" title="Sản phẩm">Events</a></li>
+          <li><a href="{{route('blog')}}" title="Tin tức">Blog</a></li>
+          <li><a href="{{route('contact')}}" title="Liên hệ">Contact</a></li>
           <li title="Tìm kiếm"><a id="icon-search" href="#"><i class="fas fa-search"></i></a></li>
-          <li title="Giỏ hàng"><a id="icon-shopping-cart" href="#" class="cart-icon"><i class="bi bi-box-arrow-right"></i></a></li>
+          <li title="Đăng nhập"><a id="icon-shopping-cart" href="{{route('login')}}" class="fas fa-sign-in-alt"><i class="bi bi-box-arrow-right"></i></a></li>
 
           <!-- Cart -->
-          <div class="cart-overlay">
+          <!-- <div class="cart-overlay">
             <div class="cart">
               <span class="close-cart"><i class="far fa-window-close fa-2x" title="Ẩn giỏ hàng"></i></span>
               <h5 class="cart-heading">Giỏ hàng của bạn</h5>
@@ -74,7 +75,7 @@
                </div>
              </div>
            </div> 
-         </div>
+         </div> -->
           <!-- cart -->
        <!-- </div> -->
      </ul>
@@ -84,24 +85,7 @@
 </div>
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <a href="product.html"><img src="images/banner/banner1.png" class="d-block w-100" alt=""></a>
-    </div>
-    <div class="carousel-item">
-      <a href="product.html"><img src="images/banner/banner3.png" class="d-block w-100" alt=""></a>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+
 
 
 </div>
@@ -113,7 +97,7 @@
 
 
 <!-- Hộp tìm kiếm -->
-<div class=" search-box" style="display: none;">
+<div class=" search-box" id="search-box" style="display: none;">
   <span class="close-search-box"><i class="far fa-window-close fa-2x" title="Đóng tìm kiếm"></i></span>
   <form class="container" role="form">
     <div class="form-group">
@@ -137,7 +121,7 @@
 
 <!-- Footer -->
 <div id="footer">
-	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 
 
 	<footer>
@@ -153,50 +137,44 @@
 							<p class="footer-logo"><img src="images/logo-footer.svg" alt="Logo" title="Logo"></p>
 							<!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
 							<p class="footer-text"><i class="fas fa-map-marker-alt text-white"></i> Số 1, ngõ 148 Phúc Diễn, Nam Từ Liêm, Hà Nội</p>
-							<p class="footer-text"><i class="fas fa-phone-alt text-white"></i> 0973863894</p>
-							<p class="footer-text"><i class="fas fa-envelope text-white"></i> khuatducthien.94@gmail.com</p>
+							<p class="footer-text"><i class="fas fa-phone-alt text-white"></i> 0973xxxxxxxx</p>
+							<p class="footer-text"><i class="fas fa-envelope text-white"></i> Thglass@gmail.com/p>
 						</div>
 
 						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-links">
 							<!-- Links -->
-							<h6 class="list-title">Liên kết nhanh</h6>
+							<h6 class="list-title">Quick link</h6>
 							<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto bg-white" style="width: 80px;">
 							<p>
-								<a class="text-white footer-link" href="index.html">Trang chủ</a>
+								<a class="text-white footer-link" href="{{route('index')}}">Home</a>
 							</p>
 							<p>
-								<a class="text-white footer-link" href="about.html">Về chúng tôi</a>
+								<a class="text-white footer-link" href="{{route('event')}}">About us</a>
 							</p>
 							<p>
-								<a class="text-white footer-link" href="product.html">Sản phẩm</a>
+								<a class="text-white footer-link" href="product.html">Event</a>
 							</p>
 							<p>
-								<a class="text-white footer-link" href="news.html">Tin tức</a>
+								<a class="text-white footer-link" href="news.html">Blog</a>
 							</p>
 						</div>
 
 						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-info">
 							<!-- Links -->
-							<h6 class="list-title">Thông tin</h6>
+							<h6 class="list-title">Information</h6>
 							<hr class="teal accent-3 mb-4 mt-0 d-inline-block bg-white" style="width: 60px;">
+					
+							
+							
 							<p>
-								<a class="text-white footer-link" href="shopping-guide.html">Hướng dẫn mua hàng</a>
-							</p>
-							<p>
-								<a class="text-white footer-link" href="transfer-info.html">Thông tin chuyển khoản</a>
-							</p>
-							<p>
-								<a class="text-white footer-link" href="#!">Chính sách đổi trả</a>
-							</p>
-							<p>
-								<a class="text-white footer-link" href="contact.html#map-container-section">Bản đồ</a>
+								<a class="text-white footer-link" href="contact.html#map-container-section">Map</a>
 							</p>
 						</div>
 
 						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-							<h6 class="list-title">Bản tin</h6>
+							<h6 class="list-title">Blog</h6>
 							<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto bg-white" style="width: 40px;">
-							<p class="footer-link">Đăng ký để nhận tin tức mới nhất</p>
+							<p class="footer-link">Sign up to receive information as soon as possible</p>
 							<form>
 								<input class="form__email" type="email" name="email" placeholder="Vui lòng điền email của bạn ở đây" required="">
 								<input class="form__submit" type="submit" name="submit" value="Đăng ký">
@@ -234,7 +212,12 @@
   logged_in_greeting="Xin chào,  hãy gửi tin nhắn cho chúng tôi."
   logged_out_greeting="Xin chào,  hãy gửi tin nhắn cho chúng tôi.">
 </div>
+<script type="text/javascript">
+	function search(){
+		document.getElementById("search-box").style.display = 'block';
 
+	}
+</script>
 
 <!-- jQuery -->
 <script src="js/jquery-3.4.1.js"></script>

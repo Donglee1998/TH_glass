@@ -1,12 +1,31 @@
 @extends('layouts.master')
 @section('content')
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="#"><img src="images/banner/banner1.png" class="d-block w-100" alt="" style="width: 100%; height: 500px"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="#"><img src="images/banner/banner3.png" class="d-block w-100" alt="" style="width: 100%; height: 500px"></a>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 <main>
 
    <!-- Sản phẩm khuyến mãi -->
    <section class="section-5 container wow fadeInLeft animated" data-wow-offset="250" style="visibility: visible; animation-name: fadeInLeft;">
     <div class="row">
       <div class="col-md-8 col-12 section-5__left px-3">
-        <p class="heading promotional-products__heading">Sản phẩm khuyến mãi</p>
+        <p class="heading promotional-products__heading">New events</p>
         <div class="promotional-products__content row">
 				<div class="wrap-card2 wrap-card2-0 col-sm-6 col-12">
 				<div data-id="13" class="card">
@@ -24,7 +43,7 @@
 				</div>
 				<div class="overlay2">
 				<a href="product-details.html#13"><div class="btn-detail2">Xem chi tiết</div></a>
-				<div class="btn-addToCart2">Thêm vào giỏ</div>
+				<!-- <div class="btn-addToCart2">Thêm vào giỏ</div> -->
 				</div>
 				</div>
 				</div>
@@ -45,7 +64,7 @@
 				</div>
 				<div class="overlay2">
 				<a href="product-details.html#15"><div class="btn-detail2">Xem chi tiết</div></a>
-				<div class="btn-addToCart2">Thêm vào giỏ</div>
+				<!-- <div class="btn-addToCart2">Thêm vào giỏ</div> -->
 				</div>
 				</div>
 				</div>
@@ -66,7 +85,7 @@
 				</div>
 				<div class="overlay2">
 				<a href="product-details.html#01"><div class="btn-detail2">Xem chi tiết</div></a>
-				<div class="btn-addToCart2">Thêm vào giỏ</div>
+				<!-- <div class="btn-addToCart2">Thêm vào giỏ</div> -->
 				</div>
 				</div>
 				</div>
@@ -87,7 +106,7 @@
 				</div>
 				<div class="overlay2">
 				<a href="product-details.html#11"><div class="btn-detail2">Xem chi tiết</div></a>
-				<div class="btn-addToCart2">Thêm vào giỏ</div>
+				<!-- <div class="btn-addToCart2">Thêm vào giỏ</div> -->
 				</div>
 				</div>
 				</div>
@@ -108,7 +127,7 @@
 				</div>
 				<div class="overlay2">
 				<a href="product-details.html#14"><div class="btn-detail2">Xem chi tiết</div></a>
-				<div class="btn-addToCart2">Thêm vào giỏ</div>
+				<!-- <div class="btn-addToCart2">Thêm vào giỏ</div> -->
 				</div>
 				</div>
 				</div>
@@ -129,7 +148,7 @@
 				</div>
 				<div class="overlay2">
 				<a href="product-details.html#12"><div class="btn-detail2">Xem chi tiết</div></a>
-				<div class="btn-addToCart2">Thêm vào giỏ</div>
+				<!-- <div class="btn-addToCart2">Thêm vào giỏ</div> -->
 				</div>
 				</div>
 				</div>
@@ -143,7 +162,7 @@
   <!-- Sản phẩm khuyến mãi -->
 
   <!-- Dịch vụ -->
-  <section class="section-1 container mx-auto wow fadeInLeft" data-wow-offset="100">
+  <!-- <section class="section-1 container mx-auto wow fadeInLeft" data-wow-offset="100">
     <div class="row mx-auto service-inner">
       <div class="col-md-4 col-12 service service-1 px-2">
         <p class="text-center"><i class="fas fa-truck fa-2x service-icon"></i></p>
@@ -161,13 +180,13 @@
         <p class="text-center service-text">Giá cả cạnh tranh so với thị trường</p>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Dịch vụ -->
 
   <!-- Sản phẩm nổi bật -->
   <section class="container-fluid section-3 hot-products wow fadeInLeft" data-wow-offset="150">
     <div class="container mx-auto">
-      <p class="heading hot-products__heading">Sản phẩm nổi bật</p>
+      <p class="heading hot-products__heading">Hot events</p>
       <div id="hot-products" class="row hot-products__content"></div>
       <div class="btn__all-products text-center mx-auto"><a href="product.html">Tất cả sản phẩm</a></div>
     </div>
