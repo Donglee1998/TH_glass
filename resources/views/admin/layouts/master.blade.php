@@ -62,8 +62,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Admin</h6>
-                        <a class="collapse-item" href="#">Admin List</a>
-                        <a class="collapse-item" href="#">Add Admin</a>
+                        <a class="collapse-item" href="{{ route('admin_index') }}">Admin List</a>
+                        <a class="collapse-item" href="{{ route('admin_addadmin') }}">Add Admin</a>
                         <a class="collapse-item" href="#">Edit permission</a>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    
+                @yield('content')
 
 
                 </div>

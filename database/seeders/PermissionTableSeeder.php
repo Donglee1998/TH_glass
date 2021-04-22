@@ -16,21 +16,21 @@ class PermissionTableSeeder extends Seeder
     public function run()
     {
         Permission::insert([
-        	['name' => 'admin-list', 'display_name' => 'Danh sách admin'],
-        	['name' => 'delete-admin', 'display_name' => 'Xóa tài khoản admin'],
-        	['name' => 'add-admin', 'display_name' => 'Thêm tài khoản admin'],
-        	['name' => 'edit-permission', 'display_name' => 'Chỉnh sửa quyền permission'],
-        	['name' => 'export-list', 'display_name' => 'Xuất file danh sách users'],
-        	['name' => 'user-list', 'display_name' => 'Danh sách user'],
-        	['name' => 'edit-avatar', 'display_name' => 'Upload hình ảnh avatar cho user'],
-        	['name' => 'banner-list', 'display_name' => 'Danh sách banner'],
-        	['name' => 'add-banner', 'display_name' => 'Thêm hình ảnh banner'],
-        	['name' => 'delete-banner', 'display_name' => 'Xóa hình ảnh banner'],
-        	['name' => 'event-list', 'display_name' => 'Danh sách event'],
-        	['name' => 'add-event', 'display_name' => 'Thêm event'],
-        	['name' => 'delete-event', 'display_name' => 'Xóa event'],
-        	['name' => 'admin-list-csv', 'display_name' => 'Thêm event bằng csv'],
-        	['name' => 'user', 'display_name' => 'Chỉ là account user']
+        	['permission_name' => 'admin-list', 'display_name' => 'Danh sách admin'],
+        	['permission_name' => 'delete-admin', 'display_name' => 'Xóa tài khoản admin'],
+        	['permission_name' => 'add-admin', 'display_name' => 'Thêm tài khoản admin'],
+        	['permission_name' => 'edit-permission', 'display_name' => 'Chỉnh sửa quyền permission'],
+        	['permission_name' => 'export-list', 'display_name' => 'Xuất file danh sách users'],
+        	['permission_name' => 'user-list', 'display_name' => 'Danh sách user'],
+        	['permission_name' => 'edit-avatar', 'display_name' => 'Upload hình ảnh avatar cho user'],
+        	['permission_name' => 'banner-list', 'display_name' => 'Danh sách banner'],
+        	['permission_name' => 'add-banner', 'display_name' => 'Thêm hình ảnh banner'],
+        	['permission_name' => 'delete-banner', 'display_name' => 'Xóa hình ảnh banner'],
+        	['permission_name' => 'event-list', 'display_name' => 'Danh sách event'],
+        	['permission_name' => 'add-event', 'display_name' => 'Thêm event'],
+        	['permission_name' => 'delete-event', 'display_name' => 'Xóa event'],
+        	['permission_name' => 'admin-list-csv', 'display_name' => 'Thêm event bằng csv'],
+        	['permission_name' => 'user', 'display_name' => 'Chỉ là account user']
         ]);
     }
 }

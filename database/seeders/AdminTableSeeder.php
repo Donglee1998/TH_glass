@@ -3,10 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
+use App\Models\Admin;
 use Hash;
 
-class UserTableSeeder extends Seeder
+class AdminTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +15,8 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        User::insert([
-        	['name'=>'dong','email'=>'dong@gmail.com','password'=>Hash::make('123456Ad'),'avatar'=>'hinh1.png']
+        Admin::insert([
+        	['name'=>'dong','email'=>'dong@gmail.com','password'=>Hash::make('123456Ad')]
         ]);
     }
 }

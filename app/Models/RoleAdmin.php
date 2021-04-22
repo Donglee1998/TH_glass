@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RolePermission extends Model
+class RoleAdmin extends Model
 {
-    //use HasFactory;
-    protected $table = 'role_permissions';
+    use HasFactory;
+    protected $table = 'role_admins';
 
     public function Role(){
     	return $this->belongsTo("App\Models\Role");
     }
 
-    public function Permission(){
-    	return $this->belongsTo("App\Models\Permission");
+    public function Admin(){
+    	return $this->belongsTo("App\Models\Admin");
     }
+
 }

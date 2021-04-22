@@ -21,7 +21,7 @@
 			</div>
 			<div>
 				<input type="submit" value="Register" />
-				<a href="{{ route('login') }}">Back to Login</a>
+				<a href="{{ route('signin') }}">Back to Login</a>
 				
 			</div>
 		</form><!-- form -->

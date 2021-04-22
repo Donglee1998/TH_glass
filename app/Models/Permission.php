@@ -9,4 +9,7 @@ class Permission extends Model
 {
     //use HasFactory;
     protected $table = 'permissions';
+    public function RolePermission(){
+    	return $this->hasMany("App\Models\RolePermission");
+    }
 }

@@ -11,7 +11,7 @@
 			
 			<div>
 				<input type="submit" value="Reset" />
-				<a href="{{ route('login') }}">Back to Login</a>
+				<a href="{{ route('signin') }}">Back to Login</a>
 				
 			</div>
 		</form><!-- form -->

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,17 +31,17 @@ Route::group(['prefix'=>'/'],function(){
 
 	 Route::get('/contact',[PageController::class, 'getContact'])->name('contact');
 
-	 Route::group(['prefixe'=>'/login'],function(){
+	 Route::group(['prefix'=>'/signin'],function(){
 
-	 	Route::get('/login',[LoginController::class, 'getLogin'])->name('login');
+	 	Route::get('/',[LoginController::class, 'getLogin'])->name('signin');
 
-	 	Route::get('/register',[LoginController::class, 'getRegister'])->name('register');
+	 	Route::get('/register',[LoginController::class, 'getRegister'])->name('registers');
 
 	 	Route::get('/password',[LoginController::class, 'getPassword'])->name('password');
 
 	 });
 
-	 Route::group(['prefixe'=>'/event'],function(){
+	 Route::group(['prefix'=>'/event'],function(){
 
 	 	Route::get('/event',[EventController::class, 'getEvent'])->name('event');
 
@@ -49,16 +51,19 @@ Route::group(['prefix'=>'/'],function(){
 
 
 });
+		
 
-	Route::get('/admin', function () {
-    return view('admin.layouts.master');
-});
+	Route::group(['prefix'=>'/admin'],function(){
+
+		Route::get('/adminlist',[AdminController::class, 'getIndex'])->name('admin_index');
+
+		Route::get('/adminadd',[AdminController::class, 'getAddAdmin'])->name('admin_addadmin');
+
+		Route::post('/adminadd',[AdminController::class, 'postAddAdmin'])->name('admin_addadmin');
+
+		Route::get('/login',[LoginAdminController::class, 'getLogin'])->name('admin_login');
+
+		Route::post('/login',[LoginAdminController::class, 'postLogin'])->name('admin_login');
+	});
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

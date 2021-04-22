@@ -13,7 +13,7 @@
 			<div>
 				<input type="submit" value="Log in" />
 				<a href="{{route('password')}}">Lost your password?</a>
-				<a href="{{route('register')}}">Register</a>
+				<a href="{{route('registers')}}">Register</a>
 			</div>
 		</form><!-- form -->
 		

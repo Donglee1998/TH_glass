@@ -47,7 +47,7 @@
           <li><a href="{{route('blog')}}" title="Tin tức">Blog</a></li>
           <li><a href="{{route('contact')}}" title="Liên hệ">Contact</a></li>
           <li title="Tìm kiếm"><a id="icon-search" href="#"><i class="fas fa-search"></i></a></li>
-          <li title="Đăng nhập"><a id="icon-shopping-cart" href="{{route('login')}}" class="fas fa-sign-in-alt"><i class="bi bi-box-arrow-right"></i></a></li>
+          <li title="Đăng nhập"><a id="icon-shopping-cart" href="{{route('signin')}}" class="fas fa-sign-in-alt"><i class="bi bi-box-arrow-right"></i></a></li>
 
           <!-- Cart -->
           <!-- <div class="cart-overlay">
