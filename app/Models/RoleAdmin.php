@@ -17,5 +17,8 @@ class RoleAdmin extends Model
     public function Admin(){
     	return $this->belongsTo("App\Models\Admin");
     }
+    protected $fillable = [
+        'admin_id', 'role_id'
+    ];
 
 }

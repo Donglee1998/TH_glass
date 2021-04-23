@@ -38,4 +38,9 @@ class LoginAdminController extends Controller
             return redirect()->back()->with(['flag' => 'danger', 'message' => 'Dang nhap khong thanh cong']);
         }
     }
+
+    public function getLogout(){
+        Auth::guard('admin')->logout();
+        return view('admin.logins.login');
+    }
 }

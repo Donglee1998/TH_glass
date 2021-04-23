@@ -67,4 +67,25 @@ abstract class BaseRepository implements RepositoryInterface
 
         return false;
     }
+    public function list($condition, $columns = ['*'])
+    {
+        $builder = $this->model;
+        $builder = $builder->orderByDesc('id');
+        $builder = $builder->select($columns);
+        if (config('constants.limit')) {
+            return $builder->paginate(config('constants.limit'))->appends($condition);
+        }
+
+        return $builder->get();
+    }
+
+    /**
+     * Retrieve all data of repository, paginated
+     */
+    public function paginate($limit = null, $columns = ['*'])
+    {
+        $limit = is_null($limit) ? config('constants.limit') : $limit;
+
+        return $this->model->paginate($limit, $columns);
+    }
 }

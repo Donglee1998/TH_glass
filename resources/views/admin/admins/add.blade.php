@@ -1,5 +1,14 @@
 @extends('admin.layouts.master')
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -12,7 +21,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" method="post" action="#">
+                            <form class="user" method="post" action="{{ route('admin_addadmin') }}">
                             	{{csrf_field()}}
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -40,7 +49,7 @@
 								  <input
 								    class="form-check-input"
 								    type="radio"
-								    value = "admin"
+								    value = "1"
 								    name="role"
 
 								  />
@@ -52,7 +61,7 @@
 								  <input
 								    class="form-check-input"
 								    type="radio"
-								    value = 'manager'
+								    value = '2'
 								    name="role"
 								  />
 								  <label class="form-check-label" for="flexRadioDefault2">Manager</label>
@@ -62,7 +71,7 @@
 								    class="form-check-input"
 								    type="radio"
 								    name="role"
-								    value="normal"
+								    value="3"
 								    checked/>
 								  <label class="form-check-label" for="flexRadioDefault2">Normal</label>
 								</div>

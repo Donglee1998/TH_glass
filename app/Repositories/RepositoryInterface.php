@@ -21,7 +21,7 @@ interface RepositoryInterface
      * Create
      * @param array $attributes
      * @return mixed
-     */
+     
     public function create($attributes = []);
 
     /**
@@ -38,4 +38,8 @@ interface RepositoryInterface
      * @return mixed
      */
     public function delete($id);
+
+    public function paginate($limit = null, $columns = ['*']);
+
+    public function list(array $condition, $columns = ['*']);
 }

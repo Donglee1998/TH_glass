@@ -61,6 +61,12 @@ Route::group(['prefix'=>'/'],function(){
 
 		Route::post('/adminadd',[AdminController::class, 'postAddAdmin'])->name('admin_addadmin');
 
+		Route::get('/logout',[LoginAdminController::class, 'getLogout'])->name('admin_logout');
+
+		//Route::post('/adminaddroleadmin',[RoleAdminController::class, 'postAddRoleAdmin'])->name('admin_addroleadmin');
+
+		Route::get('/permission',[AdminController::class, 'getViewPermission'])->name('admin_viewpermission');
+
 		Route::get('/login',[LoginAdminController::class, 'getLogin'])->name('admin_login');
 
 		Route::post('/login',[LoginAdminController::class, 'postLogin'])->name('admin_login');
